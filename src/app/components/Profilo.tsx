@@ -5,9 +5,9 @@ import Skill from "./Skill"
 
 export default function Profilo() {
   return (
-    <div className="flex flex-col h-full text-black p-2 sm:p-4">
+    <div className="flex flex-col h-full text-black sm:p-4">
       {/* CONTENUTO SCORREVOLE */}
-      <div className="flex-1 overflow-y-auto space-y-6 pr-2">
+      <div className="flex-1 overflow-y-auto space-y-6 pr-0">
         {/* CHI SONO */}
         <section>
           <h2 className="text-xl font-bold mb-2">Chi sono</h2>
@@ -31,6 +31,7 @@ export default function Profilo() {
           </div>
         </section>
       </div>
+      {/* Qua finisce la parte scrollabile */}
 
       {/* CONTATTI IN FONDO */}
       <section>
