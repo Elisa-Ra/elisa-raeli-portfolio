@@ -7,7 +7,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 export default function Contatti() {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 justify-center my-4">
       {/* LINKEDIN */}
       <a
         href="https://www.linkedin.com/in/elisa-raeli/"

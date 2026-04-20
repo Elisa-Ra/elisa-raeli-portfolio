@@ -15,7 +15,7 @@ export default function Progetti() {
       <NavProgetti onSelect={setSelected} />
 
       {/* MAIN */}
-      <main className="flex-1 p-6 overflow-y-auto bg-white">
+      <main className="flex-1 overflow-y-auto bg-white">
         {!project && (
           <p className="text-gray-500 text-lg">
             Seleziona un progetto per saperne di più!
@@ -23,8 +23,8 @@ export default function Progetti() {
         )}
 
         {project && (
-          <div className="space-y-4">
-            <h1 className="text-2xl font-bold">{selected}</h1>
+          <div className="space-y-4 flex flex-col bg-rose-300 px-3 h-screen">
+            <h1 className="text-2xl font-bold text-center">{selected}</h1>
             <p className="text-gray-700">{project.description}</p>
 
             {project.image && (
@@ -33,7 +33,7 @@ export default function Progetti() {
                 alt={selected || "project image"}
                 width={600}
                 height={400}
-                className="rounded-lg shadow-md object-contain"
+                className="object-contain max-w-xs mx-auto"
               />
             )}
           </div>

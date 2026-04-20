@@ -26,15 +26,15 @@ export default function Computer({ children }: ComputerProps) {
         className="absolute"
         style={{
           top: "4%",
-          left: "14.6%",
-          width: "70.9%",
-          height: "84.5%",
+          left: "14.0%",
+          width: "72.1%",
+          height: "85%",
         }}
       >
         {/* Richiamo la finestra con il titolo */}
         <Window title="Elisa Raeli - Portfolio" className="w-full h-full">
           {/* Contenuto della finestra, le icone */}
-          <div className="grid grid-cols-2 gap-3 p-3 w-full">{children}</div>
+          <div className="grid grid-cols-2 gap-3 p-3 w-full ">{children}</div>
         </Window>
       </div>
     </div>

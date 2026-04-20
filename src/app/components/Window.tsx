@@ -14,7 +14,7 @@ export default function Window({
   return (
     // finestra computer
     <div
-      className={`flex flex-col bg-[#e5e5e5] rounded-lg shadow-lg overflow-hidden bg-blue-100 ${className}`}
+      className={`flex flex-col bg-[#e5e5e5] rounded-lg shadow-lg overflow-hidden bg-[url('/colline.svg')] bg-cover bg-center bg-blend-multiply  ${className}`}
       style={style}
     >
       {/* barra del titolo */}
