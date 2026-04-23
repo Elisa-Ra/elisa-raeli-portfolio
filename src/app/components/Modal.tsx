@@ -25,16 +25,14 @@ export default function Modal({ title, onClose, children }: ModalProps) {
     // opacizzo lo sfondo dietro
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       {/* Richiamo la mia finestra stile window */}
-      <Window title={title} className="w-11/12 h-11/12 max-w-3xl">
+      <Window
+        title={title}
+        className="w-11/12 h-11/12 max-w-3xl"
+        showCloseButton={true}
+        onClose={handleClose}
+      >
         <div className="py-1 text-black flex flex-col h-full">
           <div className="flex-1 overflow-auto">{children}</div>
-
-          <button
-            onClick={handleClose}
-            className="mt-4 px-4 py-2 bg-sky-200 rounded hover:bg-gray-300 transition"
-          >
-            Chiudi
-          </button>
         </div>
       </Window>
     </div>

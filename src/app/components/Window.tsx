@@ -1,8 +1,14 @@
+"use client"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
 interface WindowProps {
   title?: string
   children?: React.ReactNode
   className?: string
   style?: React.CSSProperties
+  showCloseButton?: boolean
+  onClose?: () => void
 }
 
 export default function Window({
@@ -10,6 +16,8 @@ export default function Window({
   children,
   className = "",
   style = {},
+  showCloseButton = false,
+  onClose,
 }: WindowProps) {
   return (
     // finestra computer
@@ -22,12 +30,22 @@ export default function Window({
         {/* titolo vero e proprio */}
         <span className="text-sm font-semibold text-gray-950">{title}</span>
 
-        {/* cerchi colorati decorativi */}
-        <div className="flex gap-2">
-          <div className="w-3 h-3 bg-yellow-400 rounded-md border border-gray-600"></div>
-          <div className="w-3 h-3 bg-green-500 rounded-md border border-gray-600"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-md border border-gray-600"></div>
-        </div>
+        {/* se showCloseButton è true mostra il button con la x per chiudere la finestra, altrimenti i cerchi */}
+        {showCloseButton ? (
+          <button
+            onClick={onClose}
+            className="p-1 rounded-md hover:bg-gray-200 hover:ring-1 hover:ring-gray-400 transition"
+          >
+            <FontAwesomeIcon icon={faXmark} className="w-4 h-4 text-gray-900" />
+          </button>
+        ) : (
+          // cerchi colorati decorativi
+          <div className="flex gap-2">
+            <div className="w-3 h-3 bg-yellow-500 rounded-md border border-gray-600"></div>
+            <div className="w-3 h-3 bg-green-500 rounded-md border border-gray-600"></div>
+            <div className="w-3 h-3 bg-red-500 rounded-md border border-gray-600"></div>
+          </div>
+        )}
       </div>
 
       {/* contenuto */}
