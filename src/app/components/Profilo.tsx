@@ -1,7 +1,7 @@
 "use client"
 
 import Contatti from "./Contatti"
-import Skill from "./Skill"
+import SkillsPacman from "./SkillsPacman"
 
 export default function Profilo() {
   return (
@@ -12,28 +12,25 @@ export default function Profilo() {
         <section>
           <h2 className="text-xl font-bold mb-3 text-center">Chi sono</h2>
           <p className=" leading-relaxed">
-            Sono Elisa, una designer e developer che ama creare interfacce
-            eleganti, pulite e con una forte attenzione ai dettagli. Mi piace
-            unire estetica e funzionalità per dare vita a esperienze digitali
-            coerenti e piacevoli.
+            Sono Elisa, una full stack developer con un&apos;anima ibrida in cui
+            trovano spazio sia il mondo dell&apos;arte e della cultura che
+            quello della programmazione. <br></br>
+            Trovo che la tecnologia sia uno strumento meraviglioso che va messo
+            a servizio dell&apos;arte, dei contenuti. <br></br>
+            Ho conseguito la laurea triennale in Informatica Umanistica presso
+            l&apos;Università di Pisa, per poi continuare la mia missione
+            specializzandomi ancora di più nella programmazione con un master di
+            EPICODE Institute of Technology in Full-Stack Web Developer.
+            un&apos;anima ibrida in cui trovano spazio sia la cultura che il
+            coding.
           </p>
         </section>
 
         {/* COMPETENZE */}
         <section>
           <h2 className="text-xl font-bold mb-3 text-center">Competenze</h2>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
-            <Skill icon="/icons/w3_html5-icon.svg" label="HTML" />
-            <Skill icon="/icons/w3_css-icon.svg" label="CSS" />
-            <Skill icon="/icons/javascript-icon.svg" label="Javascript" />
-            <Skill icon="/icons/getbootstrap-icon.svg" label="Bootstrap" />
-            <Skill icon="/icons/reactjs-icon.svg" label="React" />
-            <Skill icon="/icons/nextjs-icon.svg" label="Next.js" />
-            <Skill icon="/icons/tailwindcss-icon.svg" label="Tailwind" />
-            <Skill icon="/icons/java-icon.svg" label="Java" />
-            <Skill icon="/icons/postgresql-icon.svg" label="PostgreSQL" />
-            <Skill icon="/icons/python-icon.svg" label="Python" />
-          </div>
+
+          <SkillsPacman />
         </section>
       </div>
       {/* Qua finisce la parte scrollabile */}
