@@ -4,6 +4,11 @@ import { useState } from "react"
 import NavProgetti from "./NavProgetti"
 import Image from "next/image"
 import { projectData } from "../data/lista-progetti"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faDesktop } from "@fortawesome/free-solid-svg-icons"
+import Badge from "./Badge"
+import Gallery from "./Gallery"
 
 const categories = {
   Siti: ["Traveler's Notebook"],
@@ -78,7 +83,39 @@ export default function Progetti() {
                 />
               </div>
             )}
-            <p className="text-gray-700">{project.description}</p>
+            <div className="flex gap-4 justify-center my-4">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center 
+         text-white text-xl transition transform hover:scale-110 hover:bg-black"
+                >
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              )}
+              <a
+                href={project.link}
+                target="_blank"
+                className="w-10 h-10 rounded-lg bg-green-600 flex items-center justify-center
+             text-white text-xs font-bold tracking-[0.15em] uppercase
+             transition transform hover:scale-110 hover:bg-green-700"
+              >
+                <FontAwesomeIcon icon={faDesktop} />
+              </a>
+            </div>
+
+            <p className="text-gray-700 whitespace-pre-line">
+              {project.description}
+            </p>
+            {project.gallery && project.gallery.length > 0 && (
+              <Gallery images={project.gallery} />
+            )}
+            <div className="flex flex-wrap gap-2">
+              {project.tec?.map((t) => (
+                <Badge key={t} label={t} />
+              ))}
+            </div>
           </div>
         )}
       </main>
