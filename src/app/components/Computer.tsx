@@ -10,7 +10,7 @@ interface ComputerProps {
 
 export default function Computer({ children }: ComputerProps) {
   return (
-    <div className="relative w-[90vw] sm:w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw] mx-auto max-w-[1400px] drop-shadow-2xl">
+    <div className="relative w-full sm:w-[95vw] md:w-[85vw] lg:w-[75vw] xl:w-[65vw] mx-auto max-w-[1400px] drop-shadow-2xl">
       {/* L'svg del computer */}
       <Image
         src="/computer2.svg"

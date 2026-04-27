@@ -6,13 +6,13 @@ export const sections: Section[] = [
   {
     id: 1,
     title: "IL MIO PROFILO",
-    thumbnail: "/user-icon.svg",
+    thumbnail: "/user-icon3.svg",
     component: <Profilo />,
   },
   {
     id: 2,
     title: "I MIEI PROGETTI",
-    thumbnail: "/progetti.svg",
+    thumbnail: "/folder3.svg",
     component: <Progetti />,
   },
 ]
