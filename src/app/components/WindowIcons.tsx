@@ -42,7 +42,7 @@ export default function WindowIcons({ sections, onSelect }: WindowIconsProps) {
   }
 
   return (
-    <div className="w-full h-full flex flex-1 items-center justify-center p-2 sm:p-6 bg-gradient-to-b from-amber-200 to-yellow-400">
+    <div className="w-full h-full flex flex-1 items-center justify-center p-2 sm:p-6 ">
       <Computer>
         {sections.map((p) => (
           <div
