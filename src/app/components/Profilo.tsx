@@ -11,18 +11,24 @@ export default function Profilo() {
         {/* CHI SONO */}
         <section>
           <h2 className="text-xl font-bold mb-3 text-center">Chi sono</h2>
-          <p className=" leading-relaxed">
-            Sono Elisa, una full stack developer con un&apos;anima ibrida in cui
-            trovano spazio sia il mondo dell&apos;arte e della cultura che
-            quello della programmazione. <br></br>
-            Trovo che la tecnologia sia uno strumento meraviglioso che va messo
-            a servizio dell&apos;arte, dei contenuti. <br></br>
-            Ho conseguito la laurea triennale in Informatica Umanistica presso
-            l&apos;Università di Pisa, per poi continuare la mia missione
-            specializzandomi ancora di più nella programmazione con un master di
-            EPICODE Institute of Technology in Full-Stack Web Developer.
-            un&apos;anima ibrida in cui trovano spazio sia la cultura che il
-            coding.
+          <p className="leading-7 whitespace-pre-line">
+            Ciao, io sono <b>Elisa Raeli</b>, vengo da Agrigento in Sicilia e
+            sono appassionata di design, digital humanities e videogiochi.
+            <br></br>
+            <br></br> La mia formazione è un ponte tra due mondi: unisco una
+            laurea in <b>Informatica Umanistica </b> presso{" "}
+            <i>l&apos;Università di Pisa</i> e un Master{" "}
+            <b>Full Stack Web Developer</b> presso{" "}
+            <i>EPICODE - Institute of Technology</i> per progettare soluzioni
+            tecnologiche capaci di dare valore reale ai contenuti. <br></br>
+            <br></br>
+            Questa visione ibrida mi permette di curare l&apos;intero ciclo di
+            vita di un progetto: dalla solidità dell&apos;architettura backend,
+            all&apos;armonia dell&apos;interfaccia frontend, fino alla strategia
+            comunicativa del contenuto stesso. <br></br>
+            Metto il codice al servizio della comunicazione e della creatività,
+            trasformando la tecnologia in uno strumento capace di raccontare
+            storie e connettere le persone in modo efficace e d&apos;impatto.
           </p>
         </section>
 
