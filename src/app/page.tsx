@@ -5,6 +5,7 @@ import WindowIcons, { Section } from "./components/WindowIcons"
 import { sections } from "./data/sections"
 import Modal from "./components/Modal"
 import Footer from "./components/Footer"
+import CozyStudioBackground from "./components/CozyStudioBackground"
 
 // Pagina principale
 export default function Page() {
@@ -12,8 +13,13 @@ export default function Page() {
 
   return (
     <>
-      <main className="flex-1">
-        <WindowIcons sections={sections} onSelect={setSelected} />
+      <main className="flex-1 relative">
+        {/* sfondo con la scrivania */}
+        <CozyStudioBackground />
+
+        <div className="absolute inset-0">
+          <WindowIcons sections={sections} onSelect={setSelected} />
+        </div>
 
         {selected && (
           <Modal title={selected.title} onClose={() => setSelected(null)}>
